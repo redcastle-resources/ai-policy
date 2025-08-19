@@ -4,7 +4,10 @@
       "WebFetch(domain:redcastleresources.com)",
       "WebSearch",
       "Bash(git remote add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh api:*)"
     ],
     "deny": [],
     "ask": []

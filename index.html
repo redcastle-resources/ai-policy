@@ -146,6 +146,33 @@
             text-decoration: underline;
         }
 
+        .federal-indicator {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+
+        .federal-compatible {
+            background: #1a4a1a;
+            color: #4ade80;
+            border: 1px solid #4ade80;
+        }
+
+        .federal-restricted {
+            background: #4a1a1a;
+            color: #f87171;
+            border: 1px solid #f87171;
+        }
+
+        .federal-limited {
+            background: #4a3a1a;
+            color: #fbbf24;
+            border: 1px solid #fbbf24;
+        }
+
         .acquisition-section {
             background: #1e1e1e;
             border: 1px solid #333333;
@@ -251,10 +278,10 @@
                 <h3 class="role-title">👨‍💼 Administrators</h3>
                 <div class="tools-section">
                     <div class="tools-title">Recommended Tools:</div>
-                    <div class="tool-item"><a href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot (Enterprise)</a> - Document automation, meeting summaries</div>
-                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a> - Policy drafting, compliance documentation</div>
-                    <div class="tool-item"><a href="https://business.grammarly.com/" target="_blank">Grammarly Business</a> - Professional communication</div>
-                    <div class="tool-item"><a href="https://www.notion.so/product/ai" target="_blank">Notion AI</a> - Knowledge management, process documentation</div>
+                    <div class="tool-item"><a href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot (Enterprise)</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - Document automation, meeting summaries</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Policy drafting, compliance documentation</div>
+                    <div class="tool-item"><a href="https://business.grammarly.com/" target="_blank">Grammarly Business</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - Professional communication</div>
+                    <div class="tool-item"><a href="https://www.notion.so/product/ai" target="_blank">Notion AI</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Knowledge management, process documentation</div>
                 </div>
                 <p><strong>Focus:</strong> Workflow optimization, compliance documentation, strategic planning support</p>
             </div>
@@ -263,11 +290,11 @@
                 <h3 class="role-title">👩‍💻 Developers</h3>
                 <div class="tools-section">
                     <div class="tools-title">Recommended Tools:</div>
-                    <div class="tool-item"><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a> - Code completion and generation</div>
-                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a> - Architecture planning, code review</div>
-                    <div class="tool-item"><a href="https://cursor.sh/" target="_blank">Cursor IDE</a> - AI-powered development environment</div>
-                    <div class="tool-item"><a href="https://www.tabnine.com/" target="_blank">Tabnine</a> - Intelligent code completion</div>
-                    <div class="tool-item"><a href="https://www.jetbrains.com/ai/" target="_blank">JetBrains AI Assistant</a> - Integrated development support</div>
+                    <div class="tool-item"><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a><span class="federal-indicator federal-limited">Fed Limited</span> - Code completion and generation</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Architecture planning, code review</div>
+                    <div class="tool-item"><a href="https://cursor.sh/" target="_blank">Cursor IDE</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - AI-powered development environment</div>
+                    <div class="tool-item"><a href="https://www.tabnine.com/" target="_blank">Tabnine</a><span class="federal-indicator federal-limited">Fed Limited</span> - Intelligent code completion</div>
+                    <div class="tool-item"><a href="https://www.jetbrains.com/ai/" target="_blank">JetBrains AI Assistant</a><span class="federal-indicator federal-limited">Fed Limited</span> - Integrated development support</div>
                 </div>
                 <p><strong>Focus:</strong> Code quality, development velocity, debugging assistance, architecture design</p>
             </div>
@@ -276,11 +303,11 @@
                 <h3 class="role-title">🔬 Researchers</h3>
                 <div class="tools-section">
                     <div class="tools-title">Recommended Tools:</div>
-                    <div class="tool-item"><a href="https://www.perplexity.ai/pro" target="_blank">Perplexity Pro</a> - Academic research and fact-checking</div>
-                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a> - Literature review, hypothesis generation</div>
-                    <div class="tool-item"><a href="https://elicit.org/" target="_blank">Elicit</a> - Research paper analysis</div>
-                    <div class="tool-item"><a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a> - AI-powered paper discovery</div>
-                    <div class="tool-item"><a href="https://scite.ai/" target="_blank">Scite</a> - Citation context analysis</div>
+                    <div class="tool-item"><a href="https://www.perplexity.ai/pro" target="_blank">Perplexity Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Academic research and fact-checking</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Literature review, hypothesis generation</div>
+                    <div class="tool-item"><a href="https://elicit.org/" target="_blank">Elicit</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Research paper analysis</div>
+                    <div class="tool-item"><a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - AI-powered paper discovery</div>
+                    <div class="tool-item"><a href="https://scite.ai/" target="_blank">Scite</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Citation context analysis</div>
                 </div>
                 <p><strong>Focus:</strong> Literature review, hypothesis generation, data interpretation, research methodology</p>
             </div>
@@ -289,11 +316,11 @@
                 <h3 class="role-title">📊 Data Analysts</h3>
                 <div class="tools-section">
                     <div class="tools-title">Recommended Tools:</div>
-                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a> - Data interpretation, report writing</div>
-                    <div class="tool-item"><a href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot (Excel)</a> - Advanced analytics</div>
-                    <div class="tool-item"><a href="https://www.tableau.com/products/tableau-ask-data" target="_blank">Tableau Ask Data</a> - Natural language queries</div>
-                    <div class="tool-item"><a href="https://www.datarobot.com/" target="_blank">DataRobot</a> - Automated machine learning</div>
-                    <div class="tool-item"><a href="https://jupyter-ai.readthedocs.io/" target="_blank">Jupyter AI</a> - Notebook assistance</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Data interpretation, report writing</div>
+                    <div class="tool-item"><a href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot (Excel)</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - Advanced analytics</div>
+                    <div class="tool-item"><a href="https://www.tableau.com/products/tableau-ask-data" target="_blank">Tableau Ask Data</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - Natural language queries</div>
+                    <div class="tool-item"><a href="https://www.datarobot.com/" target="_blank">DataRobot</a><span class="federal-indicator federal-limited">Fed Limited</span> - Automated machine learning</div>
+                    <div class="tool-item"><a href="https://jupyter-ai.readthedocs.io/" target="_blank">Jupyter AI</a><span class="federal-indicator federal-limited">Fed Limited</span> - Notebook assistance</div>
                 </div>
                 <p><strong>Focus:</strong> Data visualization, statistical analysis, predictive modeling, insight generation</p>
             </div>
@@ -302,11 +329,11 @@
                 <h3 class="role-title">🎨 Creative Team</h3>
                 <div class="tools-section">
                     <div class="tools-title">Recommended Tools:</div>
-                    <div class="tool-item"><a href="https://www.adobe.com/products/firefly.html" target="_blank">Adobe Firefly</a> - Image generation and editing</div>
-                    <div class="tool-item"><a href="https://www.canva.com/magic/" target="_blank">Canva AI</a> - Design automation</div>
-                    <div class="tool-item"><a href="https://www.jasper.ai/" target="_blank">Jasper</a> - Content creation and copywriting</div>
-                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a> - Brand voice development</div>
-                    <div class="tool-item"><a href="https://www.figma.com/ai/" target="_blank">Figma AI</a> - Design system optimization</div>
+                    <div class="tool-item"><a href="https://www.adobe.com/products/firefly.html" target="_blank">Adobe Firefly</a><span class="federal-indicator federal-limited">Fed Limited</span> - Image generation and editing</div>
+                    <div class="tool-item"><a href="https://www.canva.com/magic/" target="_blank">Canva AI</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Design automation</div>
+                    <div class="tool-item"><a href="https://www.jasper.ai/" target="_blank">Jasper</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Content creation and copywriting</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Brand voice development</div>
+                    <div class="tool-item"><a href="https://www.figma.com/ai/" target="_blank">Figma AI</a><span class="federal-indicator federal-limited">Fed Limited</span> - Design system optimization</div>
                 </div>
                 <p><strong>Focus:</strong> Content creation, visual design, brand consistency, marketing materials</p>
             </div>
@@ -315,11 +342,11 @@
                 <h3 class="role-title">💼 Sales & Marketing</h3>
                 <div class="tools-section">
                     <div class="tools-title">Recommended Tools:</div>
-                    <div class="tool-item"><a href="https://www.hubspot.com/artificial-intelligence" target="_blank">HubSpot AI</a> - CRM automation, lead scoring</div>
-                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a> - Proposal writing, client communication</div>
-                    <div class="tool-item"><a href="https://www.salesforce.com/products/einstein/" target="_blank">Salesforce Einstein</a> - Sales forecasting</div>
-                    <div class="tool-item"><a href="https://www.outreach.io/" target="_blank">Outreach</a> - Email automation and optimization</div>
-                    <div class="tool-item"><a href="https://www.gong.io/" target="_blank">Gong</a> - Sales call analysis</div>
+                    <div class="tool-item"><a href="https://www.hubspot.com/artificial-intelligence" target="_blank">HubSpot AI</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - CRM automation, lead scoring</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Proposal writing, client communication</div>
+                    <div class="tool-item"><a href="https://www.salesforce.com/products/einstein/" target="_blank">Salesforce Einstein</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - Sales forecasting</div>
+                    <div class="tool-item"><a href="https://www.outreach.io/" target="_blank">Outreach</a><span class="federal-indicator federal-limited">Fed Limited</span> - Email automation and optimization</div>
+                    <div class="tool-item"><a href="https://www.gong.io/" target="_blank">Gong</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Sales call analysis</div>
                 </div>
                 <p><strong>Focus:</strong> Lead generation, customer insights, proposal development, market analysis</p>
             </div>
@@ -386,6 +413,22 @@
 
             <div class="warning" style="margin-top: 20px;">
                 <strong>Whistleblower Protection:</strong> RedCastle Resources maintains confidential reporting channels for AI ethics concerns and provides protection for employees reporting potential violations.
+            </div>
+
+            <h3 style="color: #ffffff; margin: 30px 0 15px 0;">Federal Computer Compatibility Legend</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                <div style="display: flex; align-items: center;">
+                    <span class="federal-indicator federal-compatible">Fed Compatible</span>
+                    <span style="margin-left: 10px; color: #cccccc;">Approved for federal systems</span>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span class="federal-indicator federal-limited">Fed Limited</span>
+                    <span style="margin-left: 10px; color: #cccccc;">Requires special approval/configuration</span>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span class="federal-indicator federal-restricted">Fed Restricted</span>
+                    <span style="margin-left: 10px; color: #cccccc;">Not approved for federal systems</span>
+                </div>
             </div>
         </div>
 
