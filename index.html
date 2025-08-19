@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RedCastle Resources - AI Usage Policy</title>
-    <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/ca2478_e5198dbca61543beb2512de789e8ae16~mv2.png/v1/fill/w_88,h_122,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Icon_RCR_edited.png">
-    <link rel="shortcut icon" type="image/png" href="https://static.wixstatic.com/media/ca2478_e5198dbca61543beb2512de789e8ae16~mv2.png/v1/fill/w_88,h_122,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Icon_RCR_edited.png">
+    <link rel="icon" type="image/png"
+        href="https://static.wixstatic.com/media/ca2478_e5198dbca61543beb2512de789e8ae16~mv2.png/v1/fill/w_88,h_122,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Icon_RCR_edited.png">
+    <link rel="shortcut icon" type="image/png"
+        href="https://static.wixstatic.com/media/ca2478_e5198dbca61543beb2512de789e8ae16~mv2.png/v1/fill/w_88,h_122,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Icon_RCR_edited.png">
     <style>
         * {
             margin: 0;
@@ -226,27 +229,134 @@
             padding: 20px;
         }
 
+        /* Scrollspy Navigation */
+        .nav-scrollspy {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(30, 30, 30, 0.95);
+            border: 1px solid #333333;
+            border-radius: 8px;
+            padding: 15px;
+            max-width: 250px;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-scrollspy h4 {
+            color: #ffffff;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+        }
+
+        .nav-scrollspy ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-scrollspy li {
+            margin-bottom: 5px;
+        }
+
+        .nav-scrollspy a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.8em;
+            display: block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-scrollspy a:hover {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-scrollspy a.active {
+            color: #ffffff;
+            background: #555555;
+        }
+
+        .nav-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #333333;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
             }
-            
+
             h1 {
                 font-size: 2em;
             }
-            
+
             .roles-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .nav-scrollspy {
+                display: none;
+                top: 70px;
+                right: 10px;
+                left: 10px;
+                max-width: none;
+            }
+
+            .nav-scrollspy.show {
+                display: block;
+            }
+
+            .nav-toggle {
+                display: block;
             }
         }
     </style>
 </head>
+
 <body>
+    <!-- Navigation Toggle for Mobile -->
+    <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle Navigation">☰</button>
+    
+    <!-- Scrollspy Navigation -->
+    <nav class="nav-scrollspy" id="scrollspyNav">
+        <h4>Quick Navigation</h4>
+        <ul>
+            <li><a href="#introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#federal-legend" class="nav-link">Federal Compatibility</a></li>
+            <li><a href="#roles" class="nav-link">Role-Based Tools</a></li>
+            <li><a href="#administrators" class="nav-link">• Administrators</a></li>
+            <li><a href="#developers" class="nav-link">• Developers</a></li>
+            <li><a href="#researchers" class="nav-link">• Researchers</a></li>
+            <li><a href="#data-analysts" class="nav-link">• Data Analysts</a></li>
+            <li><a href="#creative-team" class="nav-link">• Creative Team</a></li>
+            <li><a href="#sales-marketing" class="nav-link">• Sales & Marketing</a></li>
+            <li><a href="#acquisition" class="nav-link">Tool Acquisition</a></li>
+            <li><a href="#compliance" class="nav-link">Compliance & Security</a></li>
+        </ul>
+    </nav>
+    
     <div class="container">
         <header>
             <div class="logo-container">
                 <div class="logo">
-                    <img src="https://static.wixstatic.com/media/f26cb4_1f73549473f84e4f99712a888ca43b8e~mv2.png/v1/fill/w_57,h_58,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/RCR-Logo_acrnm-icon_vert-blk%20(1).png" alt="RedCastle Resources Logo">
+                    <img src="https://static.wixstatic.com/media/f26cb4_1f73549473f84e4f99712a888ca43b8e~mv2.png/v1/fill/w_57,h_58,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/RCR-Logo_acrnm-icon_vert-blk%20(1).png"
+                        alt="RedCastle Resources Logo">
                 </div>
                 <div>
                     <h1>RedCastle Resources</h1>
@@ -255,167 +365,33 @@
             </div>
         </header>
 
-        <div class="intro">
+        <div class="intro" id="introduction">
             <h2>Introduction</h2>
-            <p>This policy outlines the approved AI tools and services for different roles within RedCastle Resources. Our approach prioritizes security, compliance, and productivity while ensuring responsible AI usage across all departments. Following industry best practices from leading consulting firms, we emphasize transparency, accountability, and human oversight in all AI implementations.</p>
-            
+            <p>This policy outlines the approved AI tools and services for different roles within RedCastle Resources.
+                Our approach prioritizes security, compliance, and productivity while ensuring responsible AI usage
+                across all departments. Following industry best practices from leading consulting firms, we emphasize
+                transparency, accountability, and human oversight in all AI implementations.</p>
+
             <div class="warning">
-                <strong>Important:</strong> All AI tool usage must comply with our data protection policies. Never input confidential client information, proprietary data, or sensitive business information into any AI tool without explicit authorization.
+                <strong>Important:</strong> All AI tool usage must comply with our data protection policies. Never input
+                confidential client information, proprietary data, or sensitive business information into any AI tool
+                without explicit authorization.
             </div>
 
             <h3 style="margin-top: 25px; margin-bottom: 15px; color: #ffffff;">Our AI Governance Principles</h3>
             <ul style="margin-left: 20px; color: #cccccc;">
-                <li><strong>Human by Design:</strong> AI augments human capabilities rather than replacing human judgment</li>
-                <li><strong>Transparency & Explainability:</strong> Clear disclosure of AI use with understandable outputs</li>
+                <li><strong>Human by Design:</strong> AI augments human capabilities rather than replacing human
+                    judgment</li>
+                <li><strong>Transparency & Explainability:</strong> Clear disclosure of AI use with understandable
+                    outputs</li>
                 <li><strong>Fairness & Impartiality:</strong> Ensuring models treat all groups equitably</li>
                 <li><strong>Safety & Security:</strong> Robust evaluation and mitigation of potential risks</li>
-                <li><strong>Accountability:</strong> Clear governance structures with defined roles and responsibilities</li>
+                <li><strong>Accountability:</strong> Clear governance structures with defined roles and responsibilities
+                </li>
             </ul>
         </div>
-
-        <div class="roles-grid">
-            <div class="role-card">
-                <h3 class="role-title">👨‍💼 Administrators</h3>
-                <div class="tools-section">
-                    <div class="tools-title">Recommended Tools:</div>
-                    <div class="tool-item"><a href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot (Enterprise)</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - Document automation, meeting summaries</div>
-                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Policy drafting, compliance documentation</div>
-                    <div class="tool-item"><a href="https://business.grammarly.com/" target="_blank">Grammarly Business</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - Professional communication</div>
-                    <div class="tool-item"><a href="https://www.notion.so/product/ai" target="_blank">Notion AI</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Knowledge management, process documentation</div>
-                </div>
-                <p><strong>Focus:</strong> Workflow optimization, compliance documentation, strategic planning support</p>
-            </div>
-
-            <div class="role-card">
-                <h3 class="role-title">👩‍💻 Developers</h3>
-                <div class="tools-section">
-                    <div class="tools-title">Recommended Tools:</div>
-                    <div class="tool-item"><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a><span class="federal-indicator federal-limited">Fed Limited</span> - Code completion and generation</div>
-                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Architecture planning, code review</div>
-                    <div class="tool-item"><a href="https://cursor.sh/" target="_blank">Cursor IDE</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - AI-powered development environment</div>
-                    <div class="tool-item"><a href="https://www.tabnine.com/" target="_blank">Tabnine</a><span class="federal-indicator federal-limited">Fed Limited</span> - Intelligent code completion</div>
-                    <div class="tool-item"><a href="https://www.jetbrains.com/ai/" target="_blank">JetBrains AI Assistant</a><span class="federal-indicator federal-limited">Fed Limited</span> - Integrated development support</div>
-                </div>
-                <p><strong>Focus:</strong> Code quality, development velocity, debugging assistance, architecture design</p>
-            </div>
-
-            <div class="role-card">
-                <h3 class="role-title">🔬 Researchers</h3>
-                <div class="tools-section">
-                    <div class="tools-title">Recommended Tools:</div>
-                    <div class="tool-item"><a href="https://www.perplexity.ai/pro" target="_blank">Perplexity Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Academic research and fact-checking</div>
-                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Literature review, hypothesis generation</div>
-                    <div class="tool-item"><a href="https://elicit.org/" target="_blank">Elicit</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Research paper analysis</div>
-                    <div class="tool-item"><a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - AI-powered paper discovery</div>
-                    <div class="tool-item"><a href="https://scite.ai/" target="_blank">Scite</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Citation context analysis</div>
-                </div>
-                <p><strong>Focus:</strong> Literature review, hypothesis generation, data interpretation, research methodology</p>
-            </div>
-
-            <div class="role-card">
-                <h3 class="role-title">📊 Data Analysts</h3>
-                <div class="tools-section">
-                    <div class="tools-title">Recommended Tools:</div>
-                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Data interpretation, report writing</div>
-                    <div class="tool-item"><a href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot (Excel)</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - Advanced analytics</div>
-                    <div class="tool-item"><a href="https://www.tableau.com/products/tableau-ask-data" target="_blank">Tableau Ask Data</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - Natural language queries</div>
-                    <div class="tool-item"><a href="https://www.datarobot.com/" target="_blank">DataRobot</a><span class="federal-indicator federal-limited">Fed Limited</span> - Automated machine learning</div>
-                    <div class="tool-item"><a href="https://jupyter-ai.readthedocs.io/" target="_blank">Jupyter AI</a><span class="federal-indicator federal-limited">Fed Limited</span> - Notebook assistance</div>
-                </div>
-                <p><strong>Focus:</strong> Data visualization, statistical analysis, predictive modeling, insight generation</p>
-            </div>
-
-            <div class="role-card">
-                <h3 class="role-title">🎨 Creative Team</h3>
-                <div class="tools-section">
-                    <div class="tools-title">Recommended Tools:</div>
-                    <div class="tool-item"><a href="https://www.adobe.com/products/firefly.html" target="_blank">Adobe Firefly</a><span class="federal-indicator federal-limited">Fed Limited</span> - Image generation and editing</div>
-                    <div class="tool-item"><a href="https://www.canva.com/magic/" target="_blank">Canva AI</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Design automation</div>
-                    <div class="tool-item"><a href="https://www.jasper.ai/" target="_blank">Jasper</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Content creation and copywriting</div>
-                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Brand voice development</div>
-                    <div class="tool-item"><a href="https://www.figma.com/ai/" target="_blank">Figma AI</a><span class="federal-indicator federal-limited">Fed Limited</span> - Design system optimization</div>
-                </div>
-                <p><strong>Focus:</strong> Content creation, visual design, brand consistency, marketing materials</p>
-            </div>
-
-            <div class="role-card">
-                <h3 class="role-title">💼 Sales & Marketing</h3>
-                <div class="tools-section">
-                    <div class="tools-title">Recommended Tools:</div>
-                    <div class="tool-item"><a href="https://www.hubspot.com/artificial-intelligence" target="_blank">HubSpot AI</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - CRM automation, lead scoring</div>
-                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Proposal writing, client communication</div>
-                    <div class="tool-item"><a href="https://www.salesforce.com/products/einstein/" target="_blank">Salesforce Einstein</a><span class="federal-indicator federal-compatible">Fed Compatible</span> - Sales forecasting</div>
-                    <div class="tool-item"><a href="https://www.outreach.io/" target="_blank">Outreach</a><span class="federal-indicator federal-limited">Fed Limited</span> - Email automation and optimization</div>
-                    <div class="tool-item"><a href="https://www.gong.io/" target="_blank">Gong</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Sales call analysis</div>
-                </div>
-                <p><strong>Focus:</strong> Lead generation, customer insights, proposal development, market analysis</p>
-            </div>
-        </div>
-
-        <div class="acquisition-section">
-            <h2>Tool Acquisition Process</h2>
-            <p>Following industry best practices, we implement a structured governance approach for AI tool acquisition that emphasizes risk management and ethical considerations:</p>
-            
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">Step 1</div>
-                    <h4>Submit Request & Risk Assessment</h4>
-                    <p>Complete the AI Tool Request Form with business justification, intended use cases, and preliminary risk evaluation including bias assessment and data handling requirements.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">Step 2</div>
-                    <h4>Cross-Functional Review</h4>
-                    <p>AI Governance Committee (including IT Security, Legal, Compliance, and Business Leaders) conducts comprehensive risk assessment and ethical evaluation.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">Step 3</div>
-                    <h4>Budget & Strategic Alignment</h4>
-                    <p>Department head and Finance approve budget allocation while ensuring alignment with responsible AI objectives and business strategy.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">Step 4</div>
-                    <h4>Procurement & Vendor Assessment</h4>
-                    <p>Procurement team handles vendor negotiations, contract execution, and vendor AI ethics compliance verification.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">Step 5</div>
-                    <h4>Training & Continuous Monitoring</h4>
-                    <p>Mandatory responsible AI training completion, deployment with monitoring controls, and ongoing performance evaluation.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="compliance-section">
-            <h2>🛡️ Compliance & Security Guidelines</h2>
-            <p style="margin-bottom: 20px;">Based on industry-leading practices from major consulting firms, our comprehensive compliance framework ensures responsible AI usage:</p>
-            
-            <h3 style="color: #ffffff; margin-bottom: 15px;">Core Requirements</h3>
-            <ul style="margin-left: 20px; margin-bottom: 20px;">
-                <li><strong>Data Protection:</strong> Never input confidential client data, financial information, or proprietary algorithms</li>
-                <li><strong>Human Oversight:</strong> Maintain clear human oversight over the full AI lifecycle, from design to deployment</li>
-                <li><strong>License Compliance:</strong> Use only approved, licensed tools with proper user agreements and vendor ethics verification</li>
-                <li><strong>Bias Monitoring:</strong> Regular assessment of AI outputs for fairness and potential discrimination</li>
-                <li><strong>Output Verification:</strong> Always verify AI-generated content for accuracy, appropriateness, and ethical compliance</li>
-            </ul>
-
-            <h3 style="color: #ffffff; margin-bottom: 15px;">Monitoring & Governance</h3>
-            <ul style="margin-left: 20px; margin-bottom: 20px;">
-                <li><strong>Quarterly Audits:</strong> Comprehensive AI tool usage monitoring and risk assessment</li>
-                <li><strong>AI Ethics Training:</strong> Mandatory completion of responsible AI training for all users</li>
-                <li><strong>Incident Reporting:</strong> Immediate reporting of data breaches, bias incidents, or ethical concerns</li>
-                <li><strong>Continuous Learning:</strong> Regular updates to policies based on emerging best practices and regulations</li>
-                <li><strong>Performance Metrics:</strong> Ongoing evaluation of AI effectiveness and responsible usage indicators</li>
-            </ul>
-
-            <div class="warning" style="margin-top: 20px;">
-                <strong>Whistleblower Protection:</strong> RedCastle Resources maintains confidential reporting channels for AI ethics concerns and provides protection for employees reporting potential violations.
-            </div>
-
-            <h3 style="color: #ffffff; margin: 30px 0 15px 0;">Federal Computer Compatibility Legend</h3>
+        <div class="role-card" style="margin-bottom: 1rem;" id="federal-legend">
+            <h3 class="role-title">Federal Computer Compatibility Legend</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
                 <div style="display: flex; align-items: center;">
                     <span class="federal-indicator federal-compatible">Fed Compatible</span>
@@ -431,11 +407,304 @@
                 </div>
             </div>
         </div>
+        <div class="roles-grid" id="roles">
+            
+            <div class="role-card" id="administrators">
+                <h3 class="role-title">👨‍💼 Administrators</h3>
+                <div class="tools-section">
+                    <div class="tools-title">Recommended Tools:</div>
+                    <div class="tool-item"><a href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot
+                            (Enterprise)</a><span class="federal-indicator federal-compatible">Fed Compatible</span> -
+                        Document automation, meeting summaries</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span
+                            class="federal-indicator federal-restricted">Fed Restricted</span> - Policy drafting,
+                        compliance documentation</div>
+                    <div class="tool-item"><a href="https://business.grammarly.com/" target="_blank">Grammarly
+                            Business</a><span class="federal-indicator federal-compatible">Fed Compatible</span> -
+                        Professional communication</div>
+                    <div class="tool-item"><a href="https://www.notion.so/product/ai" target="_blank">Notion AI</a><span
+                            class="federal-indicator federal-restricted">Fed Restricted</span> - Knowledge management,
+                        process documentation</div>
+                </div>
+                <p><strong>Focus:</strong> Workflow optimization, compliance documentation, strategic planning support
+                </p>
+            </div>
+
+            <div class="role-card" id="developers">
+                <h3 class="role-title">👩‍💻 Developers</h3>
+                <div class="tools-section">
+                    <div class="tools-title">Recommended Tools:</div>
+                    <div class="tool-item"><a href="https://github.com/features/copilot" target="_blank">GitHub
+                            Copilot</a><span class="federal-indicator federal-limited">Fed Limited</span> - Code
+                        completion and generation</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span
+                            class="federal-indicator federal-restricted">Fed Restricted</span> - Architecture planning,
+                        code review</div>
+                    <div class="tool-item"><a href="https://cursor.sh/" target="_blank">Cursor IDE</a><span
+                            class="federal-indicator federal-restricted">Fed Restricted</span> - AI-powered development
+                        environment</div>
+                    <div class="tool-item"><a href="https://www.tabnine.com/" target="_blank">Tabnine</a><span
+                            class="federal-indicator federal-limited">Fed Limited</span> - Intelligent code completion
+                    </div>
+                    <div class="tool-item"><a href="https://www.jetbrains.com/ai/" target="_blank">JetBrains AI
+                            Assistant</a><span class="federal-indicator federal-limited">Fed Limited</span> - Integrated
+                        development support</div>
+                </div>
+                <p><strong>Focus:</strong> Code quality, development velocity, debugging assistance, architecture design
+                </p>
+            </div>
+
+            <div class="role-card" id="researchers">
+                <h3 class="role-title">🔬 Researchers</h3>
+                <div class="tools-section">
+                    <div class="tools-title">Recommended Tools:</div>
+                    <div class="tool-item"><a href="https://www.perplexity.ai/pro" target="_blank">Perplexity
+                            Pro</a><span class="federal-indicator federal-restricted">Fed Restricted</span> - Academic
+                        research and fact-checking</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span
+                            class="federal-indicator federal-restricted">Fed Restricted</span> - Literature review,
+                        hypothesis generation</div>
+                    <div class="tool-item"><a href="https://elicit.org/" target="_blank">Elicit</a><span
+                            class="federal-indicator federal-restricted">Fed Restricted</span> - Research paper analysis
+                    </div>
+                    <div class="tool-item"><a href="https://www.semanticscholar.org/" target="_blank">Semantic
+                            Scholar</a><span class="federal-indicator federal-compatible">Fed Compatible</span> -
+                        AI-powered paper discovery</div>
+                    <div class="tool-item"><a href="https://scite.ai/" target="_blank">Scite</a><span
+                            class="federal-indicator federal-restricted">Fed Restricted</span> - Citation context
+                        analysis</div>
+                </div>
+                <p><strong>Focus:</strong> Literature review, hypothesis generation, data interpretation, research
+                    methodology</p>
+            </div>
+
+            <div class="role-card" id="data-analysts">
+                <h3 class="role-title">📊 Data Analysts</h3>
+                <div class="tools-section">
+                    <div class="tools-title">Recommended Tools:</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span
+                            class="federal-indicator federal-restricted">Fed Restricted</span> - Data interpretation,
+                        report writing</div>
+                    <div class="tool-item"><a href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot
+                            (Excel)</a><span class="federal-indicator federal-compatible">Fed Compatible</span> -
+                        Advanced analytics</div>
+                    <div class="tool-item"><a href="https://www.tableau.com/products/tableau-ask-data"
+                            target="_blank">Tableau Ask Data</a><span class="federal-indicator federal-compatible">Fed
+                            Compatible</span> - Natural language queries</div>
+                    <div class="tool-item"><a href="https://www.datarobot.com/" target="_blank">DataRobot</a><span
+                            class="federal-indicator federal-limited">Fed Limited</span> - Automated machine learning
+                    </div>
+                    <div class="tool-item"><a href="https://jupyter-ai.readthedocs.io/" target="_blank">Jupyter
+                            AI</a><span class="federal-indicator federal-limited">Fed Limited</span> - Notebook
+                        assistance</div>
+                </div>
+                <p><strong>Focus:</strong> Data visualization, statistical analysis, predictive modeling, insight
+                    generation</p>
+            </div>
+
+            <div class="role-card" id="creative-team">
+                <h3 class="role-title">🎨 Creative Team</h3>
+                <div class="tools-section">
+                    <div class="tools-title">Recommended Tools:</div>
+                    <div class="tool-item"><a href="https://www.adobe.com/products/firefly.html" target="_blank">Adobe
+                            Firefly</a><span class="federal-indicator federal-limited">Fed Limited</span> - Image
+                        generation and editing</div>
+                    <div class="tool-item"><a href="https://www.canva.com/magic/" target="_blank">Canva AI</a><span
+                            class="federal-indicator federal-restricted">Fed Restricted</span> - Design automation</div>
+                    <div class="tool-item"><a href="https://www.jasper.ai/" target="_blank">Jasper</a><span
+                            class="federal-indicator federal-restricted">Fed Restricted</span> - Content creation and
+                        copywriting</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span
+                            class="federal-indicator federal-restricted">Fed Restricted</span> - Brand voice development
+                    </div>
+                    <div class="tool-item"><a href="https://www.figma.com/ai/" target="_blank">Figma AI</a><span
+                            class="federal-indicator federal-limited">Fed Limited</span> - Design system optimization
+                    </div>
+                </div>
+                <p><strong>Focus:</strong> Content creation, visual design, brand consistency, marketing materials</p>
+            </div>
+
+            <div class="role-card" id="sales-marketing">
+                <h3 class="role-title">💼 Sales & Marketing</h3>
+                <div class="tools-section">
+                    <div class="tools-title">Recommended Tools:</div>
+                    <div class="tool-item"><a href="https://www.hubspot.com/artificial-intelligence"
+                            target="_blank">HubSpot AI</a><span class="federal-indicator federal-compatible">Fed
+                            Compatible</span> - CRM automation, lead scoring</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a><span
+                            class="federal-indicator federal-restricted">Fed Restricted</span> - Proposal writing,
+                        client communication</div>
+                    <div class="tool-item"><a href="https://www.salesforce.com/products/einstein/"
+                            target="_blank">Salesforce Einstein</a><span
+                            class="federal-indicator federal-compatible">Fed Compatible</span> - Sales forecasting</div>
+                    <div class="tool-item"><a href="https://www.outreach.io/" target="_blank">Outreach</a><span
+                            class="federal-indicator federal-limited">Fed Limited</span> - Email automation and
+                        optimization</div>
+                    <div class="tool-item"><a href="https://www.gong.io/" target="_blank">Gong</a><span
+                            class="federal-indicator federal-restricted">Fed Restricted</span> - Sales call analysis
+                    </div>
+                </div>
+                <p><strong>Focus:</strong> Lead generation, customer insights, proposal development, market analysis</p>
+            </div>
+        </div>
+
+        <div class="acquisition-section" id="acquisition">
+            <h2>Tool Acquisition Process</h2>
+            <p>Following industry best practices, we implement a structured governance approach for AI tool acquisition
+                that emphasizes risk management and ethical considerations:</p>
+
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">Step 1</div>
+                    <h4>Submit Request & Risk Assessment</h4>
+                    <p>Complete the AI Tool Request Form with business justification, intended use cases, and
+                        preliminary risk evaluation including bias assessment and data handling requirements.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">Step 2</div>
+                    <h4>Cross-Functional Review</h4>
+                    <p>AI Governance Committee (including IT Security, Legal, Compliance, and Business Leaders) conducts
+                        comprehensive risk assessment and ethical evaluation.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">Step 3</div>
+                    <h4>Budget & Strategic Alignment</h4>
+                    <p>Department head and Finance approve budget allocation while ensuring alignment with responsible
+                        AI objectives and business strategy.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">Step 4</div>
+                    <h4>Procurement & Vendor Assessment</h4>
+                    <p>Procurement team handles vendor negotiations, contract execution, and vendor AI ethics compliance
+                        verification.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">Step 5</div>
+                    <h4>Training & Continuous Monitoring</h4>
+                    <p>Mandatory responsible AI training completion, deployment with monitoring controls, and ongoing
+                        performance evaluation.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="compliance-section" id="compliance">
+            <h2>🛡️ Compliance & Security Guidelines</h2>
+            <p style="margin-bottom: 20px;">Based on industry-leading practices from major consulting firms, our
+                comprehensive compliance framework ensures responsible AI usage:</p>
+
+            <h3 style="color: #ffffff; margin-bottom: 15px;">Core Requirements</h3>
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+                <li><strong>Data Protection:</strong> Never input confidential client data, financial information, or
+                    proprietary algorithms</li>
+                <li><strong>Human Oversight:</strong> Maintain clear human oversight over the full AI lifecycle, from
+                    design to deployment</li>
+                <li><strong>License Compliance:</strong> Use only approved, licensed tools with proper user agreements
+                    and vendor ethics verification</li>
+                <li><strong>Bias Monitoring:</strong> Regular assessment of AI outputs for fairness and potential
+                    discrimination</li>
+                <li><strong>Output Verification:</strong> Always verify AI-generated content for accuracy,
+                    appropriateness, and ethical compliance</li>
+            </ul>
+
+            <h3 style="color: #ffffff; margin-bottom: 15px;">Monitoring & Governance</h3>
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+                <li><strong>Quarterly Audits:</strong> Comprehensive AI tool usage monitoring and risk assessment</li>
+                <li><strong>AI Ethics Training:</strong> Mandatory completion of responsible AI training for all users
+                </li>
+                <li><strong>Incident Reporting:</strong> Immediate reporting of data breaches, bias incidents, or
+                    ethical concerns</li>
+                <li><strong>Continuous Learning:</strong> Regular updates to policies based on emerging best practices
+                    and regulations</li>
+                <li><strong>Performance Metrics:</strong> Ongoing evaluation of AI effectiveness and responsible usage
+                    indicators</li>
+            </ul>
+
+            <div class="warning" style="margin-top: 20px;">
+                <strong>Whistleblower Protection:</strong> RedCastle Resources maintains confidential reporting channels
+                for AI ethics concerns and provides protection for employees reporting potential violations.
+            </div>
+
+
+        </div>
 
         <footer>
-            <p>&copy; 2025 RedCastle Resources, Inc. This policy is effective as of August 2025 and subject to regular updates.</p>
+            <p>&copy; 2025 RedCastle Resources, Inc. This policy is effective as of August 2025 and subject to regular
+                updates.</p>
             <p>For questions or support, email: <strong>support@redcastleresources.com</strong></p>
         </footer>
     </div>
+    
+    <script>
+        // Scrollspy functionality
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // Smooth scroll to section
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                
+                // Close mobile nav if open
+                if (window.innerWidth <= 768) {
+                    document.getElementById('scrollspyNav').classList.remove('show');
+                }
+            });
+        });
+        
+        // Toggle mobile navigation
+        function toggleNav() {
+            const nav = document.getElementById('scrollspyNav');
+            nav.classList.toggle('show');
+        }
+        
+        // Update active link on scroll
+        window.addEventListener('scroll', updateActiveNavLink);
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateActiveNavLink();
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                document.getElementById('scrollspyNav').classList.remove('show');
+            }
+        });
+    </script>
 </body>
+
 </html>
