@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedCastle Resources - AI Usage Policy</title>
+    <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/ca2478_e5198dbca61543beb2512de789e8ae16~mv2.png/v1/fill/w_88,h_122,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Icon_RCR_edited.png">
+    <link rel="shortcut icon" type="image/png" href="https://static.wixstatic.com/media/ca2478_e5198dbca61543beb2512de789e8ae16~mv2.png/v1/fill/w_88,h_122,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Icon_RCR_edited.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #121212;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            border-radius: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .intro {
+            background: #1e1e1e;
+            border: 1px solid #333333;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .role-card {
+            background: #1e1e1e;
+            border: 1px solid #333333;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .role-card:hover {
+            transform: translateY(-5px);
+            border-color: #555555;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .role-title {
+            color: #ffffff;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #555555;
+            padding-bottom: 8px;
+            font-weight: 300;
+        }
+
+        .tools-section {
+            margin-bottom: 20px;
+        }
+
+        .tools-title {
+            font-weight: bold;
+            color: #cccccc;
+            margin-bottom: 10px;
+        }
+
+        .tool-item {
+            background: #2a2a2a;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border-radius: 3px;
+            border-left: 4px solid #555555;
+            transition: background-color 0.2s ease;
+        }
+
+        .tool-item:hover {
+            background: #333333;
+        }
+
+        .tool-item a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .tool-item a:hover {
+            color: #cccccc;
+            text-decoration: underline;
+        }
+
+        .acquisition-section {
+            background: #1e1e1e;
+            border: 1px solid #333333;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .compliance-section {
+            background: #2a2a2a;
+            border: 1px solid #444444;
+            padding: 25px;
+            border-radius: 3px;
+            margin-bottom: 30px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .step {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 3px;
+            border-left: 4px solid #555555;
+        }
+
+        .step-number {
+            font-weight: 500;
+            color: #ffffff;
+            font-size: 1.2em;
+        }
+
+        .warning {
+            background: #3a3a1a;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            color: #ffc107;
+        }
+
+        footer {
+            text-align: center;
+            color: #999999;
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .roles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="https://static.wixstatic.com/media/f26cb4_1f73549473f84e4f99712a888ca43b8e~mv2.png/v1/fill/w_57,h_58,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/RCR-Logo_acrnm-icon_vert-blk%20(1).png" alt="RedCastle Resources Logo">
+                </div>
+                <div>
+                    <h1>RedCastle Resources</h1>
+                    <p class="subtitle">Artificial Intelligence Usage Policy & Guidelines</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="intro">
+            <h2>Introduction</h2>
+            <p>This policy outlines the approved AI tools and services for different roles within RedCastle Resources. Our approach prioritizes security, compliance, and productivity while ensuring responsible AI usage across all departments. Following industry best practices from leading consulting firms, we emphasize transparency, accountability, and human oversight in all AI implementations.</p>
+            
+            <div class="warning">
+                <strong>Important:</strong> All AI tool usage must comply with our data protection policies. Never input confidential client information, proprietary data, or sensitive business information into any AI tool without explicit authorization.
+            </div>
+
+            <h3 style="margin-top: 25px; margin-bottom: 15px; color: #ffffff;">Our AI Governance Principles</h3>
+            <ul style="margin-left: 20px; color: #cccccc;">
+                <li><strong>Human by Design:</strong> AI augments human capabilities rather than replacing human judgment</li>
+                <li><strong>Transparency & Explainability:</strong> Clear disclosure of AI use with understandable outputs</li>
+                <li><strong>Fairness & Impartiality:</strong> Ensuring models treat all groups equitably</li>
+                <li><strong>Safety & Security:</strong> Robust evaluation and mitigation of potential risks</li>
+                <li><strong>Accountability:</strong> Clear governance structures with defined roles and responsibilities</li>
+            </ul>
+        </div>
+
+        <div class="roles-grid">
+            <div class="role-card">
+                <h3 class="role-title">👨‍💼 Administrators</h3>
+                <div class="tools-section">
+                    <div class="tools-title">Recommended Tools:</div>
+                    <div class="tool-item"><a href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot (Enterprise)</a> - Document automation, meeting summaries</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a> - Policy drafting, compliance documentation</div>
+                    <div class="tool-item"><a href="https://business.grammarly.com/" target="_blank">Grammarly Business</a> - Professional communication</div>
+                    <div class="tool-item"><a href="https://www.notion.so/product/ai" target="_blank">Notion AI</a> - Knowledge management, process documentation</div>
+                </div>
+                <p><strong>Focus:</strong> Workflow optimization, compliance documentation, strategic planning support</p>
+            </div>
+
+            <div class="role-card">
+                <h3 class="role-title">👩‍💻 Developers</h3>
+                <div class="tools-section">
+                    <div class="tools-title">Recommended Tools:</div>
+                    <div class="tool-item"><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a> - Code completion and generation</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a> - Architecture planning, code review</div>
+                    <div class="tool-item"><a href="https://cursor.sh/" target="_blank">Cursor IDE</a> - AI-powered development environment</div>
+                    <div class="tool-item"><a href="https://www.tabnine.com/" target="_blank">Tabnine</a> - Intelligent code completion</div>
+                    <div class="tool-item"><a href="https://www.jetbrains.com/ai/" target="_blank">JetBrains AI Assistant</a> - Integrated development support</div>
+                </div>
+                <p><strong>Focus:</strong> Code quality, development velocity, debugging assistance, architecture design</p>
+            </div>
+
+            <div class="role-card">
+                <h3 class="role-title">🔬 Researchers</h3>
+                <div class="tools-section">
+                    <div class="tools-title">Recommended Tools:</div>
+                    <div class="tool-item"><a href="https://www.perplexity.ai/pro" target="_blank">Perplexity Pro</a> - Academic research and fact-checking</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a> - Literature review, hypothesis generation</div>
+                    <div class="tool-item"><a href="https://elicit.org/" target="_blank">Elicit</a> - Research paper analysis</div>
+                    <div class="tool-item"><a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a> - AI-powered paper discovery</div>
+                    <div class="tool-item"><a href="https://scite.ai/" target="_blank">Scite</a> - Citation context analysis</div>
+                </div>
+                <p><strong>Focus:</strong> Literature review, hypothesis generation, data interpretation, research methodology</p>
+            </div>
+
+            <div class="role-card">
+                <h3 class="role-title">📊 Data Analysts</h3>
+                <div class="tools-section">
+                    <div class="tools-title">Recommended Tools:</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a> - Data interpretation, report writing</div>
+                    <div class="tool-item"><a href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot (Excel)</a> - Advanced analytics</div>
+                    <div class="tool-item"><a href="https://www.tableau.com/products/tableau-ask-data" target="_blank">Tableau Ask Data</a> - Natural language queries</div>
+                    <div class="tool-item"><a href="https://www.datarobot.com/" target="_blank">DataRobot</a> - Automated machine learning</div>
+                    <div class="tool-item"><a href="https://jupyter-ai.readthedocs.io/" target="_blank">Jupyter AI</a> - Notebook assistance</div>
+                </div>
+                <p><strong>Focus:</strong> Data visualization, statistical analysis, predictive modeling, insight generation</p>
+            </div>
+
+            <div class="role-card">
+                <h3 class="role-title">🎨 Creative Team</h3>
+                <div class="tools-section">
+                    <div class="tools-title">Recommended Tools:</div>
+                    <div class="tool-item"><a href="https://www.adobe.com/products/firefly.html" target="_blank">Adobe Firefly</a> - Image generation and editing</div>
+                    <div class="tool-item"><a href="https://www.canva.com/magic/" target="_blank">Canva AI</a> - Design automation</div>
+                    <div class="tool-item"><a href="https://www.jasper.ai/" target="_blank">Jasper</a> - Content creation and copywriting</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a> - Brand voice development</div>
+                    <div class="tool-item"><a href="https://www.figma.com/ai/" target="_blank">Figma AI</a> - Design system optimization</div>
+                </div>
+                <p><strong>Focus:</strong> Content creation, visual design, brand consistency, marketing materials</p>
+            </div>
+
+            <div class="role-card">
+                <h3 class="role-title">💼 Sales & Marketing</h3>
+                <div class="tools-section">
+                    <div class="tools-title">Recommended Tools:</div>
+                    <div class="tool-item"><a href="https://www.hubspot.com/artificial-intelligence" target="_blank">HubSpot AI</a> - CRM automation, lead scoring</div>
+                    <div class="tool-item"><a href="https://claude.ai/" target="_blank">Claude Pro</a> - Proposal writing, client communication</div>
+                    <div class="tool-item"><a href="https://www.salesforce.com/products/einstein/" target="_blank">Salesforce Einstein</a> - Sales forecasting</div>
+                    <div class="tool-item"><a href="https://www.outreach.io/" target="_blank">Outreach</a> - Email automation and optimization</div>
+                    <div class="tool-item"><a href="https://www.gong.io/" target="_blank">Gong</a> - Sales call analysis</div>
+                </div>
+                <p><strong>Focus:</strong> Lead generation, customer insights, proposal development, market analysis</p>
+            </div>
+        </div>
+
+        <div class="acquisition-section">
+            <h2>Tool Acquisition Process</h2>
+            <p>Following industry best practices, we implement a structured governance approach for AI tool acquisition that emphasizes risk management and ethical considerations:</p>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">Step 1</div>
+                    <h4>Submit Request & Risk Assessment</h4>
+                    <p>Complete the AI Tool Request Form with business justification, intended use cases, and preliminary risk evaluation including bias assessment and data handling requirements.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">Step 2</div>
+                    <h4>Cross-Functional Review</h4>
+                    <p>AI Governance Committee (including IT Security, Legal, Compliance, and Business Leaders) conducts comprehensive risk assessment and ethical evaluation.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">Step 3</div>
+                    <h4>Budget & Strategic Alignment</h4>
+                    <p>Department head and Finance approve budget allocation while ensuring alignment with responsible AI objectives and business strategy.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">Step 4</div>
+                    <h4>Procurement & Vendor Assessment</h4>
+                    <p>Procurement team handles vendor negotiations, contract execution, and vendor AI ethics compliance verification.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">Step 5</div>
+                    <h4>Training & Continuous Monitoring</h4>
+                    <p>Mandatory responsible AI training completion, deployment with monitoring controls, and ongoing performance evaluation.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="compliance-section">
+            <h2>🛡️ Compliance & Security Guidelines</h2>
+            <p style="margin-bottom: 20px;">Based on industry-leading practices from major consulting firms, our comprehensive compliance framework ensures responsible AI usage:</p>
+            
+            <h3 style="color: #ffffff; margin-bottom: 15px;">Core Requirements</h3>
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+                <li><strong>Data Protection:</strong> Never input confidential client data, financial information, or proprietary algorithms</li>
+                <li><strong>Human Oversight:</strong> Maintain clear human oversight over the full AI lifecycle, from design to deployment</li>
+                <li><strong>License Compliance:</strong> Use only approved, licensed tools with proper user agreements and vendor ethics verification</li>
+                <li><strong>Bias Monitoring:</strong> Regular assessment of AI outputs for fairness and potential discrimination</li>
+                <li><strong>Output Verification:</strong> Always verify AI-generated content for accuracy, appropriateness, and ethical compliance</li>
+            </ul>
+
+            <h3 style="color: #ffffff; margin-bottom: 15px;">Monitoring & Governance</h3>
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+                <li><strong>Quarterly Audits:</strong> Comprehensive AI tool usage monitoring and risk assessment</li>
+                <li><strong>AI Ethics Training:</strong> Mandatory completion of responsible AI training for all users</li>
+                <li><strong>Incident Reporting:</strong> Immediate reporting of data breaches, bias incidents, or ethical concerns</li>
+                <li><strong>Continuous Learning:</strong> Regular updates to policies based on emerging best practices and regulations</li>
+                <li><strong>Performance Metrics:</strong> Ongoing evaluation of AI effectiveness and responsible usage indicators</li>
+            </ul>
+
+            <div class="warning" style="margin-top: 20px;">
+                <strong>Whistleblower Protection:</strong> RedCastle Resources maintains confidential reporting channels for AI ethics concerns and provides protection for employees reporting potential violations.
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 RedCastle Resources, Inc. This policy is effective as of August 2025 and subject to regular updates.</p>
+            <p>For questions or support, email: <strong>support@redcastleresources.com</strong></p>
+        </footer>
+    </div>
+</body>
+</html>
